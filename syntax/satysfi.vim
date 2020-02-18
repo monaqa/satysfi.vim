@@ -219,10 +219,11 @@ syn match satysfiHorzActvError "[+#\\]\%([A-Z][-a-zA-Z0-9]*\.\)*[a-zA-Z][-a-zA-Z
 syn cluster satysfiMath contains=satysfiComment,satysfiMathError,satysfiMathOperator,satysfiMathIdentifier,satysfiMathHashVariable,satysfiMathCommand,satysfiMathCommandKnown,satysfiMathEscape,satysfiProgFromMath,satysfiVertFromMath,satysfiHorzFromMath,satysfiMathEncl
 
 " Unexpected symbols
-syn match satysfiMathError "[][|()"#$&;@]" contained
+syn match satysfiMathError "[][()"#$&;@]" contained
 " ! must be followed by [{<([]
 syn match satysfiMathError "![^{<([]\@=" contained
 
+syn match satysfiMathOperator "|" contained
 syn match satysfiMathOperator "\^" contained
 syn match satysfiMathOperator "_" contained
 syn match satysfiMathOperator "[-+*/:=<>~'.,?`]\+" contained
